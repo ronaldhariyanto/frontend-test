@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en" ng-app="application">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Star Wars Dictionary</title>
+    <link href="./assets/css/app.css" rel="stylesheet" type="text/css">
+    <script src="./assets/js/foundation.js"></script>
+    <script src="./assets/js/templates.js"></script>
+    <script src="./assets/js/routes.js"></script>
+    <script src="./assets/js/app.js"></script>
+  </head>
+  <body>
+    <zf-offcanvas position="left" id="menu">
+      <a zf-close="" class="close-button">×</a>
+      <h2>Star Wars Dictionary</h2>
+      <ul class="primary condense menu-bar vertical">
+        <li ui-sref-active="is-active">
+          <a ui-sref="home">Home</a>
+        </li>
+        <li ui-sref-active="is-active">
+          <a ui-sref="films">Films</a>
+        </li>
+        <li ui-sref-active="is-active">
+          <a ui-sref="species">Species</a>
+        </li>
+        <li ui-sref-active="is-active">
+          <a ui-sref="planets">Planets</a>
+        </li>
+        <li ui-sref-active="is-active">
+          <a ui-sref="people">People</a>
+        </li>
+        <li ui-sref-active="is-active">
+          <a ui-sref="starships">Starships</a>
+        </li>
+        <li ui-sref-active="is-active">
+          <a ui-sref="vehicles">Vehicles</a>
+        </li>
+      </ul>
+    </zf-offcanvas>
+    <div class="grid-frame vertical">
+      <div class="grid-content shrink">
+        <div class="menu-group">
+          <div class="menu-group-left">
+            <ul class="primary condense menu-bar">
+              <li class="show-small">
+                <a class="offcanvas-toggle" zf-hard-toggle="menu">&equiv;</a><
+              /li>
+              <li class="show-all" ui-sref-active="is-active">
+                <a ui-sref="home"><strong>Star Wars Dictionary</strong></a>
+              </li>
+              <li ui-sref-active="is-active">
+                <a ui-sref="films">Films</a>
+              </li>
+              <li ui-sref-active="is-active">
+                <a ui-sref="species">Species</a>
+              </li>
+              <li ui-sref-active="is-active">
+                <a ui-sref="planets">Planets</a>
+              </li>
+              <li ui-sref-active="is-active">
+                <a ui-sref="people">People</a>
+              </li>
+              <li ui-sref-active="is-active">
+                <a ui-sref="starships">Starships</a>
+              </li>
+              <li ui-sref-active="is-active">
+                <a ui-sref="vehicles">Vehicles</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <base href="/"/>
+      <div ng-class="['ui-animation']" class="grid-frame vertical" ui-view ></div>
+    </div>
+  </body>
+</html>

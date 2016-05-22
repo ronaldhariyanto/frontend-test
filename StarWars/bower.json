@@ -1,0 +1,28 @@
+{
+  "name": "star-wars-dictionary",
+  "version": "1.0.0",
+  "authors": [
+    "Ronald Hariyanto"
+  ],
+  "description": "Star Wars Dictionary build base on Foundation for Apps by ZURB.",
+  "main": "gulpfile.js",
+  "keywords": [
+    "framework",
+    "angular",
+    "web",
+    "apps"
+  ],
+  "license": "MIT",
+  "homepage": "http://project8.co/demo/star-wars",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation-apps": "~1.2.0"
+  }
+}
