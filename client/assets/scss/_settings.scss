@@ -90,15 +90,15 @@
 // $font-weight-bold: bold;
 
 // We use these to control various global styles
-// $body-background: #fff;
-// $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-// $body-font-weight: $font-weight-normal;
+$body-background: #000;
+$body-font-color: #fff;
+$body-font-family: "Lato", Arial, sans-serif;
+$body-font-weight: 400;
 // $body-font-style: normal;
 // $body-antialiased: true;
 
 // Application Colors
-// $primary-color: #00558b;
+$primary-color: #000;
 // $secondary-color: #f1f1f1;
 // $alert-color: #F04124;
 // $info-color: #A0D3E8;
@@ -139,7 +139,7 @@
 // $header-font-family: $body-font-family;
 // $header-font-weight: $font-weight-normal;
 // $header-font-style: $font-weight-normal;
-// $header-font-color: #222;
+$header-font-color: #fff;
 // $header-line-height: 1.4;
 // $header-top-margin: .2rem;
 // $header-bottom-margin: .5rem;
@@ -426,12 +426,12 @@
 // - - - - - - - - - - - - - - -
 
 // $menubar-fontsize: 1rem;
-// $menubar-background: #fff;
-// $menubar-background-hover: smartscale($menubar-background, 7%);
-// $menubar-background-active: $menubar-background-hover;
-// $menubar-color: isitlight($menubar-background);
-// $menubar-color-hover: $menubar-color;
-// $menubar-color-active: $menubar-color-hover;
+$menubar-background: #000;
+$menubar-background-hover: smartscale(#ffe300, 7%);
+$menubar-background-active: $menubar-background-hover;
+$menubar-color: #ffe300;
+$menubar-color-hover: #000;
+$menubar-color-active: $menubar-color-hover;
 
 // $menubar-item-padding: $global-padding;
 // $menubar-icon-size: 25px;

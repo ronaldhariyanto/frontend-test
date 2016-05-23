@@ -1,10 +1,60 @@
-.off-canvas ~ .grid-frame,
-.off-canvas {
-	background: $secondary-color;
+
+
+.menu-bar {
+
+	> li {
+		> a {
+			align-self: center;
+			> .logo {
+				height: 48px;
+				padding-left: 10px;
+				padding-right: 10px;
+				margin-bottom: 0;
+			}
+		}
+
+		&.show-all {
+			> a {
+				padding: 0 10px;
+				background-color: #000;
+			}
+		}
+	}
+
+	&.primary {
+    	background: #ffe300;
+
+    	> li > a {
+    		color: #000;
+    	}
+	}
+
+	&.vertical {
+		&> li {
+			&> a {
+				font-size: 36px;
+				text-align: center;
+				display: block;
+				padding: 30px 0;
+				font-family: "STARWARS";
+				letter-spacing: 0.7px;
+				transition: .2s all ease-out;
+				-webkit-text-overflow: ellipsis;
+				text-overflow: ellipsis;
+			}
+		}
+	}
+
+	&.condense {
+		text-transform: uppercase;
+		.is-active > a {
+			font-weight: 900;
+		}
+	}
 }
 
 .menu-group {
-	background: $primary-color;
+	background: #ffe300;
 	@include breakpoint(medium) {
 		li.show-small {
 			display: none;
@@ -25,7 +75,12 @@
 	}
 }
 
+.off-canvas ~ .grid-frame {
+	background: #000;
+}
+
 .off-canvas {
+	background: #ffe300;
 	overflow: auto;
 	h2 {
 		font-size: 2.125rem;
@@ -52,8 +107,10 @@
 }
 
 h1 {
+	font-family: 'STARWARS';
+    color: #ffe300;
 	line-height: 1;
-	padding: .2em 0;
+	padding: 30px 0;
 	@media screen and (max-width: 500px) {
 		font-size: 3.375rem;
 	}
@@ -66,31 +123,6 @@ h1 {
 }
 
 
-.menu-bar.condense {
-	text-transform: uppercase;
-	.is-active > a {
-		font-weight: 900;
-		background: #343434;
-	}
-}
-
-.menu-group {
-	background: $primary-color;
-	@include breakpoint(medium) {
-		li.show-small {
-			display: none;
-		}
-	}
-	@include breakpoint(medium down) {
-		li {
-			display: none;
-		}
-		li.show-small,
-		li.show-all {
-			display: flex;
-		}
-	}
-}
 
 .button.pagination {
 	font-size: 30px;
@@ -100,31 +132,7 @@ h1 {
 	width: 100%;
 }
 
-.menu-bar.vertical {
-	background: none;
-	margin: 0 -1rem;
-	&> li {
-		&> a {
-			font-weight: bold;
-			font-size: 40px;
-			text-align: center;
-			display: block;
-			padding: 27px 0;
-			font-family: $header-font-family;
-			transition: .2s all ease-out;
-			-webkit-text-overflow: ellipsis;
-			text-overflow: ellipsis;
-			&:hover {
-				background: #000;
-				color: #fff;
-			}
-		}
-	}
-}
 
-hr {
-	border: 1px dashed #000;
-}
 
 dt, dd {
 	display: block;
@@ -161,42 +169,14 @@ dd {
 	}
 }
 
-.home-list {
-	margin: 0;
-	list-style: none;
-	li {
-		float: left;
-		width: 33%;
-		clear: none;
-		text-align: center;
-		margin-bottom: .5%;
-		margin-right: .5%;
-		&:nth-child(3n) {
-			margin-right: 0;
-		}
-		a {
-			display: block;
-			font-size: 24px;
-			line-height: 10;
-			text-transform: uppercase;
-			font-weight: 900;
-			background: $primary-color;
-			color: #fff;
-			@media screen and (max-width: 400px) {
-				font-size: 16px;
-			}
-			&:hover {
-				color: $secondary-color;
-			}
-		}
-	}
-}
-
 .crawl {
 	white-space: pre-wrap;
 }
 
 .grid-content {
+	&.shrink {
+		padding: 0;
+	}
 	&.films,
 	&.species,
 	&.planets,
@@ -209,3 +189,134 @@ dd {
 		}
 	}
 }
+
+/* Keyframes */
+
+@keyframes star {
+    0% {
+        opacity: 0;
+        transform: scale(1.5) translateY(-0.75em);
+    }
+    20% {
+        opacity: 1;
+    }
+    89% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateZ(-1000em);
+    }
+}
+
+@keyframes wars {
+    0% {
+        opacity: 0;
+        transform: scale(1.5) translateY(0.5em);
+    }
+    20% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateZ(-1000em);
+    }
+}
+
+@keyframes spin-letters {
+    0%,
+    10% {
+        opacity: 0;
+        transform: rotateY(90deg);
+    }
+    30% {
+        opacity: 1;
+    }
+    70%,
+    86% {
+        transform: rotateY(0);
+        opacity: 1;
+    }
+    95%,
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes text-force {
+    0% {
+        transform: translateZ(5em);
+    }
+    100% {
+        transform: translateZ(0);
+    }
+}
+
+.starwars-container {
+	background: #000 url('../images/bg.jpg');
+	width: 100%;
+	height: 100%;
+}
+
+.starwars-home {
+    perspective: 800px;
+    height: 17em;
+    left: 50%;
+    position: absolute;
+    top: 53%;
+    transform: translate(-50%, -50%);
+    width: 34em;
+
+    @media only screen and (max-width: 600px) {
+    	font-size: 10px;
+    }
+
+    @media only screen and (max-width: 480px) {
+        font-size: 7px;
+    }
+}
+
+.icon-star,
+.icon-wars,
+.text-force {
+    position: absolute;
+}
+
+.icon-star {
+    top: -0.75em;
+    animation: star 10s ease-out infinite;
+    width: 100%;
+}
+
+.icon-wars {
+    bottom: -0.5em;
+    animation: wars 10s ease-out infinite;
+    width: 100%;
+}
+
+
+.text-force {
+    color: #fff;
+    font-family: "ITC Serif Gothic", Lato;
+    font-size: 2.25em;
+    left: -2em;
+    letter-spacing: 0.4em;
+    right: -2em;
+    text-align: center;
+    text-transform: uppercase;
+    top: 37%;
+    animation: text-force 10s linear infinite;
+
+    span {
+    	animation: spin-letters 10s linear infinite;
+        display: inline-block;
+    }
+}
+
+
+

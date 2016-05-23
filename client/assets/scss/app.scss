@@ -1,3 +1,13 @@
+@font-face {
+	font-family : "STARWARS";
+	src : url("../fonts/STARWARS.eot?") format("eot"),
+	url("../fonts/STARWARS.woff") format("woff"),
+	url("../fonts/STARWARS.ttf") format("truetype"),
+	url("../fonts/STARWARS.svg#STARWARS") format("svg");
+	font-weight : normal;
+	font-style : normal;
+}
+
 @import "settings";
 @import "foundation";
 @import "starwars";
